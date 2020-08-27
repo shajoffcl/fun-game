@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>FUN GAME</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h2>What Does Your Name Says About Your Personality.</h2>
+        </div>
+        <div class="box">
+            <div class="details">
+                <label>PLEASE ENTER YOUR NAME::</label><br>
+                <input type="text" id="nameid" placeholder="Your Name" required>
+            </div>
+            <div class="imgDiv">
+                <img src="d5kdeoi-e7777249-16a2-424f-be69-883c6aa2b593.png" width="200" height="250" id="imgChange">
+            </div>
+            <button>Click Me</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('button').click(function(){
+                    const name=$('#nameid').val();
+                    alert(name);
+                    $('#imgChange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+                });
+
+            });
+        </script>
+</body>
+</html>
